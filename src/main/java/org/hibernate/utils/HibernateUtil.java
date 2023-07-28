@@ -19,11 +19,8 @@ public class HibernateUtil {
             File file = new File("hibernate.cfg.xml");
             try {
                 registry = new StandardServiceRegistryBuilder().configure(file).build();
-
                 MetadataSources metadataSources = new MetadataSources(registry);
-
                 Metadata metadata = metadataSources.getMetadataBuilder().build();
-
                 sessionFactory = metadata.getSessionFactoryBuilder().build();
             } catch (Exception e) {
                 e.printStackTrace();

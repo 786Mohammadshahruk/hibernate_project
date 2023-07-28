@@ -3,6 +3,7 @@ package test;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.utils.HibernateUtil;
+import org.hibernate.utils.HibernateUtils2;
 
 public class HibernateClientTest {
 
@@ -24,7 +25,7 @@ public class HibernateClientTest {
             }
         }*/
 
-        try(SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        try(SessionFactory sessionFactory = HibernateUtils2.getSessionFactory();
             Session session = sessionFactory.openSession()) {
             String SQL = "select version()";
             String version = (String) session.createNativeQuery(SQL).getSingleResult();
