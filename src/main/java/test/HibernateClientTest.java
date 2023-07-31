@@ -1,14 +1,15 @@
+/*
 package test;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.utils.HibernateUtil;
-import org.hibernate.utils.HibernateUtils2;
 
 public class HibernateClientTest {
 
     public static void main(String[] args) {
-        /*Session session = null;
+        */
+/*Session session = null;
         SessionFactory sessionFactory = null;
         try {
             sessionFactory = HibernateUtil.getSessionFactory();
@@ -23,7 +24,8 @@ public class HibernateClientTest {
                 session.close();
                 sessionFactory.close();
             }
-        }*/
+        }*//*
+
 
         try(SessionFactory sessionFactory = HibernateUtils2.getSessionFactory();
             Session session = sessionFactory.openSession()) {
@@ -41,3 +43,4 @@ public class HibernateClientTest {
 
 
 
+*/
